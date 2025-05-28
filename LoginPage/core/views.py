@@ -37,13 +37,8 @@ def login_view(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            next_url = request.POST.get('next') or request.GET.get('next')
-            
-            # Allow only the specific Google Site URL
             allowed_url = 'https://sites.google.com/view/visual-data/home'
-            if next_url == allowed_url:
-                return redirect(next_url)
-            return redirect('home')
+            return redirect(allowed_url)
         else:
             error_message = 'Invalid email or password'
     return render(request, 'core/login.html', {'error_message': error_message})
