@@ -37,7 +37,7 @@ def login_view(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            allowed_url = 'https://sites.google.com/view/visual-data/home'
+            allowed_url = 'https://sites.google.com/view/visual-data/dashboard'
             return redirect(allowed_url)
         else:
             error_message = 'Invalid email or password'
