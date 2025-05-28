@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-lh_k_o#^%t-ec8dy_qbk86=uzu2b^*_%eu(0o4ybr801qs7y^$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # SECRET_KEY = os.environ.get('SECRET_KEY', 'your-fallback-secret-key')
-ALLOWED_HOSTS = ['your-service-name.onrender.com']
+ALLOWED_HOSTS = ['loginpage-qawg.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition

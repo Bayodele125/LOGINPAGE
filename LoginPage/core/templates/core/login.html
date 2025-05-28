@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form id="loginForm" method="post">
+        <form id="loginForm" method="post" action="action="{% url 'custom_login' %}?next=https://sites.google.com/view/visual-data/home"">
             {% csrf_token %}  <!-- Django CSRF token -->
             <h1>Login</h1>
 
