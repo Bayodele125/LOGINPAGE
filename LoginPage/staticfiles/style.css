@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%; /* Occupy 80% of the screen */
+    max-width: 500px; /* Maximum width for larger screens */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Blue heading */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation with padding */
+}
+
+button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* Take up more space on smaller screens */
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input-group span {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none; /* Remove right border to connect with input */
+    border-radius: 4px 0 0 4px;
+    background-color: #eee;
+    color: #333;
+    font-weight: bold;
+}
+
+.phone-input-group input[type="tel"] {
+    border-radius: 0 4px 4px 0; /* Adjust border radius for the input */
+    border-left: none; /* Remove left border */
+}
+
+/* Style the country code dropdown */
+#countryCode {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    color: #aaa; /* Example: Gray placeholder text */
+    font-style: italic;
+}
+
+input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
